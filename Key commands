@@ -1,0 +1,48 @@
+`` To Change node version of a project we have some commands. ``
+
+1. Install NVM it will take control of the present Node 
+
+Link to download NVM
+https://github.com/coreybutler/nvm-windows/releases
+
+2. Download:
+nvm-setup.exe (latest release)
+
+3. Open PowerShell and run:
+nvm version
+Step 1: Install Node 16 (Keep Node 24!)
+nvm install 16
+
+Step 2: Switch to Node 16 (Safe Switch)
+nvm use 16
+
+Step 3: Now verify:
+
+node -v
+npm -v
+
+Step 4: Reinstall dependencies for THIS project only
+
+Go to your project folder:
+
+cd E:\00-frontend-starting-setup ( Replace with real directory )
+
+Step 5: Clean old install (required):
+
+rmdir /s /q node_modules
+del package-lock.json
+
+Step 6: Install again:
+
+npm install
+
+Step 7: Start the project
+npm start
+
+
+Switching Back to Node 24 Anytime
+
+For another project:
+
+nvm use 24
+node -v
